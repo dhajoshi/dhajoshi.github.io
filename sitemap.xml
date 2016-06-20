@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://dhajoshi.github.io/blog/2016/06/18/learning-docker/</loc>
+<lastmod>2016-06-18T09:01:01-04:00</lastmod>
+</url>
+<url>
 <loc>http://dhajoshi.github.io/blog/archives/</loc>
 </url>
 <url>
 <loc>http://dhajoshi.github.io/</loc>
+</url>
+<url>
+<loc>http://dhajoshi.github.io/what-is-docker/</loc>
+</url>
+<url>
+<loc>http://dhajoshi.github.io/about/</loc>
 </url>
 </urlset>

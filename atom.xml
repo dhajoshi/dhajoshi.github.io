@@ -4,7 +4,7 @@
   <title><![CDATA[DJ's Technical Talk]]></title>
   <link href="http://dhajoshi.github.io/atom.xml" rel="self"/>
   <link href="http://dhajoshi.github.io/"/>
-  <updated>2016-06-18T08:41:01-04:00</updated>
+  <updated>2016-06-20T11:11:34-04:00</updated>
   <id>http://dhajoshi.github.io/</id>
   <author>
     <name><![CDATA[Dhaval Joshi]]></name>
@@ -12,5 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Docker]]></title>
+    <link href="http://dhajoshi.github.io/blog/2016/06/18/learning-docker/"/>
+    <updated>2016-06-18T09:01:01-04:00</updated>
+    <id>http://dhajoshi.github.io/blog/2016/06/18/learning-docker</id>
+    <content type="html"><![CDATA[<p><strong>What are containers?</strong></p>
+
+<p>Below is very High Level discussion</p>
+
+<p>Any business requires applications to run their business, and for running those applications it requires some hardware, in past when we go to application owners and ask them what kind of hardware they require to run their application and always you know the answer will be  &ldquo;hmmm&hellip; &rdquo; &ldquo;aaaa..&rdquo;, let&rsquo;s get the fastest machine.</p>
+
+<p>and business will buy strong machine like 16 core CPUs, 32GB of memory and 200GB of disks.</p>
+
+<p>later it&rsquo;s found that application is only using 10% of the resources and all other capacity is wasted,</p>
+
+<p>above is not a great model to follow and it requires some solution.</p>
+
+<p><strong>VMware</strong></p>
+
+<p>The solution to above problem is VMware or hypervisor, VMware is now much more mature, so let say for above configuration server if you find out server is only utilizing 10% or hardware, you can add more virtual machines to it.</p>
+
+<p>Above solves the problem by making the utilization of server more efficient, but that&rsquo;s not the only problem we want to solve.</p>
+
+<p><img src="http://www.virtuatopia.com/images/2/21/Type_1_virtualization.jpg"></p>
+
+<p>if you look at above Vmware/hypervisor architecture, it requires, hypervisor and on top of that it requires operating system(VMs), so if you are running five applications you will need to install five operating systems and application on top of that.</p>
+
+<p>the cons of doing above are:</p>
+
+<ul>
+<li>you still have to manage those 5 operating system ( like patching, bug, upgrades ,rebooting, shutdown and so on), this requires extra resources.</li>
+<li>even if you have assigned 25% of capacity to each of your 5 VMs, they might be using 10% out of that 25%.</li>
+<li>and as always Cost and licenses to run those operatingsystems.</li>
+</ul>
+
+
+<p><strong>Containers</strong></p>
+
+<p><img src="http://2.bp.blogspot.com/-1ep1ZnQ7J4U/VKFqsRuBGTI/AAAAAAAAAEc/MbzWKcDrxsc/s1600/Docker-Engine.png"></p>
+
+<p>And here comes the containers, which solves the above problems, in case of containers, you only need to install single operating system on top of your hardware, and you can start containers on top of that, there is no need for hypervisors and operating systems for segregating different applications.</p>
+
+<p>they are very light weight and very fast in starting and stoping. More details on containers is in next chapter.</p>
+
+<p>Note: i am not saying stop using hypervisor and move it to containers over night, as hypervisor is very mature and containers are moving fast and still under heavy development.</p>
+
+<p><a href="http://localhost:4000/what-is-docker">http://localhost:4000/what-is-docker</a></p>
+]]></content>
+  </entry>
   
 </feed>

@@ -9,7 +9,7 @@
   <meta name="author" content="Dhaval Joshi">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts GitHub Repos Status updating... @dhajoshi on GitHub ">
+  <meta name="description" content="What are containers? Below is very High Level discussion Any business requires applications to run their business, and for running those applications &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,13 +18,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://dhajoshi.github.io/">
+  <link rel="canonical" href="http://dhajoshi.github.io">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="DJ's Technical Talk" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -35,36 +35,114 @@
 </head>
 
 <body   >
-  <header role="banner"><hgroup>
+  <header role="banner"><div class="header-left">
+  <hgroup>
   <h1><a href="/">DJ's Technical Talk</a></h1>
   
+  <div class="subtitle">
     <h2>I Write to Learn.</h2>
+  </div>
   
-</hgroup>
+  </hgroup>
+  
+</div>
 
+<div class="header-right">
+  <ul class="main-navigation">
+ <div class="selected"> 
+  <li><a href="/">blog</a></li></div><div class="spacer"></div>
+     <div> 
+  <li><a href="/projects">projects</a></li></div><div class="spacer"></div>
+       <div> 
+  <li><a href="/work">work</a></li></div><div class="spacer"></div>
+         <div> 
+  <li><a href="/about">about</a></li></div>
+</ul>
+  
+
+</div>
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="sitesearch" value="dhajoshi.github.io">
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
   <div id="main">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/06/18/learning-docker/">Learning Docker</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-06-18T09:01:01-04:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>What are containers?</strong></p>
+
+<p>Below is very High Level discussion</p>
+
+<p>Any business requires applications to run their business, and for running those applications it requires some hardware, in past when we go to application owners and ask them what kind of hardware they require to run their application and always you know the answer will be  &ldquo;hmmm&hellip; &rdquo; &ldquo;aaaa..&rdquo;, let&rsquo;s get the fastest machine.</p>
+
+<p>and business will buy strong machine like 16 core CPUs, 32GB of memory and 200GB of disks.</p>
+
+<p>later it&rsquo;s found that application is only using 10% of the resources and all other capacity is wasted,</p>
+
+<p>above is not a great model to follow and it requires some solution.</p>
+
+<p><strong>VMware</strong></p>
+
+<p>The solution to above problem is VMware or hypervisor, VMware is now much more mature, so let say for above configuration server if you find out server is only utilizing 10% or hardware, you can add more virtual machines to it.</p>
+
+<p>Above solves the problem by making the utilization of server more efficient, but that&rsquo;s not the only problem we want to solve.</p>
+
+<p><img src="http://www.virtuatopia.com/images/2/21/Type_1_virtualization.jpg"></p>
+
+<p>if you look at above Vmware/hypervisor architecture, it requires, hypervisor and on top of that it requires operating system(VMs), so if you are running five applications you will need to install five operating systems and application on top of that.</p>
+
+<p>the cons of doing above are:</p>
+
+<ul>
+<li>you still have to manage those 5 operating system ( like patching, bug, upgrades ,rebooting, shutdown and so on), this requires extra resources.</li>
+<li>even if you have assigned 25% of capacity to each of your 5 VMs, they might be using 10% out of that 25%.</li>
+<li>and as always Cost and licenses to run those operatingsystems.</li>
+</ul>
+
+
+<p><strong>Containers</strong></p>
+
+<p><img src="http://2.bp.blogspot.com/-1ep1ZnQ7J4U/VKFqsRuBGTI/AAAAAAAAAEc/MbzWKcDrxsc/s1600/Docker-Engine.png"></p>
+
+<p>And here comes the containers, which solves the above problems, in case of containers, you only need to install single operating system on top of your hardware, and you can start containers on top of that, there is no need for hypervisors and operating systems for segregating different applications.</p>
+
+<p>they are very light weight and very fast in starting and stoping. More details on containers is in next chapter.</p>
+
+<p>Note: i am not saying stop using hypervisor and move it to containers over night, as hypervisor is very mature and containers are moving fast and still under heavy development.</p>
+
+<p><a href="http://localhost:4000/what-is-docker">http://localhost:4000/what-is-docker</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   <div class="pagination">
     
@@ -73,10 +151,47 @@
   </div>
 </div>
 <aside class="sidebar">
+  <section>
+  <p>Hi, I'm <a href="https://twitter.com/martinbjeldbak">Martin Bjeldbak Madsen</a>!</p>
+  
+
+  <p>You can read more about me on my <a href="/about/">about</a> page. To see what I'm working on, check out my GitHub page <a href="https://github.com/fapper">here</a>.</p>
+  <p>My resume can be found <a href="cv.pdf">here</a>.</p>
+  <div class="social-icons">
+    
+
+    
+
+    
+
+    
+  <a href="https://github.com/dhajoshi"><i class="fa fa-github fa-3x"></i></a>
+
+
+    
+
+  </div>
+</section>
+
+  <section>
+  <h1>Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/06/18/learning-docker/">Learning Docker</a>
+      </li>
+    
+  </ul>
+</section>
+
   
     <section>
-  <h1>Recent Posts</h1>
+  <h1>Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/06/18/learning-docker/">Learning Docker</a>
+      </li>
     
   </ul>
 </section>
@@ -124,6 +239,10 @@
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
+<p>
+<span>Copyright &copy; 2016  Dhaval Joshi -</span>
+<span class="credit">Powered by <a href="http://octopress.org">Octopress</a> using the <a href="https://github.com/fapper/classic-martinb">classic-martinb</a> theme</span>
+</p>
 </footer>
   
 
