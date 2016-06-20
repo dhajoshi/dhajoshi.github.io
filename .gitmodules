@@ -1,3 +1,6 @@
 [submodule ".themes/classic-martinb"]
 	path = .themes/classic-martinb
+	url = git://github.com/dhajoshi/classic-martinb.git
+[submodule ".themes/.themes/classic-martinb"]
+	path = .themes/.themes/classic-martinb
 	url = git://github.com/martinbjeldbak/classic-martinb.git
